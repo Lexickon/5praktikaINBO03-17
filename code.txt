@@ -1,0 +1,48 @@
+#include <iostream>
+using namespace std;
+
+void calculator(int f, char symb, int s)
+{
+	switch (symb) 
+    {
+    	case'+' : cout << f << " " << symb << " " << s << " = " << (f+s) << endl; 
+			break;
+    	case'-' : cout << f << " " << symb << " " << s << " = " << (f-s) << endl; 
+			break; 
+		case'/' : cout << f << " " << symb << " " << s << " = " << (f/s) << endl; 
+			break; 
+    	case'*' : cout << f << " " << symb << " " << s << " = " << (f*s) << endl; 
+			break;
+    	default : cout << "The entered data is incorrect, try again." << endl;
+    }
+}
+void calculator(double f, char symb, double s)
+{
+	switch (symb) 
+    {
+    	case'+' : cout << f << " " << symb << " " << s << " = " << (f+s) << endl; 
+			break;
+    	case'-' : cout << f << " " << symb << " " << s << " = " << (f-s) << endl; 
+			break; 
+   		case'/' : cout << f << " " << symb << " " << s << " = " << (f/s) << endl; 
+			break;
+		case'*' : cout << f << " " << symb << " " << s << " = " << (f*s) << endl; 
+			break;
+    	default : cout << "The entered data is incorrect, try again." << endl;
+    }
+}
+
+int main()
+{ 
+    char c; 
+    float a, b;
+    cout << "Enter the first number: \n";
+       cin >> a;
+    cout << "Enter the sign: \n";
+       cin >> c;
+    cout << "Enter the second number: \n";
+       cin >> b;
+    calculator(a, c, b);
+ 	system("pause");
+		return 0;
+}
